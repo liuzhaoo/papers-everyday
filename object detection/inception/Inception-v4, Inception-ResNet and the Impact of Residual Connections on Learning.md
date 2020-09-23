@@ -20,3 +20,12 @@
 
   
 
+  
+
+##### 若网络中不带“V”标记的代表此卷积输入输出相同
+
+  
+
+![](https://raw.githubusercontent.com/liuzhaoo/markdown_pics/master/img/inceptiv4-2.png)
+
+![](https://raw.githubusercontent.com/liuzhaoo/markdown_pics/master/img/incepv4-1.png)

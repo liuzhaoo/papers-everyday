@@ -71,7 +71,7 @@ v_{il}^{xy} = \varphi(b_{i,j}+\sum_m\sum^{P_i-1}_{p=0}\sum^{Q_i-1}_{q=0}\sum^{R_
 $$
 其中，R 是时间长度，2D卷积和3D卷积示意图如下：
 
-![](https://raw.githubusercontent.com/liuzhaoo/markdown_pics/master/img/2d&3d.png)
+<img src="https://raw.githubusercontent.com/liuzhaoo/markdown_pics/master/img/2d&3d.png" style="zoom:100%;" />
 
 Ji等人设计了一个用于行为识别的3D CNN网络，是2012年之前重要的开创性作品之一，它有1个硬线层，3个卷积层，2个下采样层和一个全连接层，硬线层生成灰度通道，梯度通道和光流通道。之后，在每个通道中应用卷积和下采样，最后的行为识别是通过结合所有通道的信息计算得到的。最近Ji等人改进了他们的3D CNN 网络，将输出的高级特征正则化，并且结合了多种不同CNN 结构的预测。与此同时，Tran等人做了系统的研究来寻找3D CNN的最佳卷积核的时间长度而且开发了一种VGG风格的3D CNN结构，名为C3D。如图5所示，C3D结构使用了8个卷积层以及$3\times3\times3$  的小卷积核，5个池化层和两个全连接层。此网络提取到的特征经过证明是通用的，而且高效、紧凑。此外，Tran等人在深度残差网络中进行了3D CNN 的研究，开发了一种ResNet18风格的网络，名为Res3D,在识别精度方面优与C3D.相比C3D, Res3D在运行时快2倍，在尺寸上小2倍，而且更紧凑。通过在最大的行为识别数据集Sports-1M上进行预训练，作者提供了C3D和Res3D的预训练模型，这些模型既可以用作迁移学习的初始化，也可作为固定的时空特征提取器。不同于以上提到的工作（在7，16或8帧的视频切片上学习时空信息），Varol等人开发了一种长时间时间卷积结构（LTC）,该结构通过在更长一点的视频片段上（比如60或者100帧）部署3D CNN在全时间尺度上表示动作，而且证明了高质量光流作为LTC输入的重要性。
 
@@ -155,7 +155,7 @@ Sports-1M[71]:为了在视频领域获取足够数量的数据训练CNN架构，
 
 快速查看表2中的结果，可以发现UFC101实现的动作识别精度超过94%。然而，同样的方法在HMDB51上只能达到大约70%的精度，因为HMDB51存在较大的视点变化、杂乱的背景以及行动者位置、规模和外观的变化。这说明现有的动作识别方法无法克服这些挑战。另一方面，我们注意到早期基于cnn的作品表现不如与iDT有关的方法。随着CNN结构越来越深和新技术的采用，最近开发的基于CNN的方法有了明显的改进，其性能优于iDT相关的方法。
 
-![](https://raw.githubusercontent.com/liuzhaoo/markdown_pics/master/img/table12.png)
+<img src="https://raw.githubusercontent.com/liuzhaoo/markdown_pics/master/img/table12.png" style="zoom: 100%;" />
 
 
 
